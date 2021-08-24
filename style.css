@@ -262,6 +262,7 @@ main{
     grid-row: 2/3;
     display: grid;
     grid-template-columns: 1fr 1.2fr;
+    margin-top: 25px;
 }
 .section-two-text-two{
     grid-column: 2/3;
