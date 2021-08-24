@@ -211,6 +211,7 @@ main{
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
+    margin: 50px 0;
 }
 .section-two-wrapper{
     grid-column: 2/3;
