@@ -1,0 +1,145 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+#container-wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: #f8ecf9;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+}
+.wrapper{
+    grid-column: 2/3;
+    height: auto;
+    display: grid;
+    grid-template-rows: 1fr 4fr .5fr;
+}
+header{
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.back{
+    display: flex;
+    align-items: center;
+}
+.back button{
+    margin: 10px;
+    width: 35px;
+    height: 35px;
+}
+.back h4{
+    margin: 0;
+}
+.content{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.col-one{
+    display: flex;
+    align-items: center;
+}
+.col-one-inside h1{
+    font-size: 36px;
+}
+.col-one .text{
+    display: flex;
+    
+}
+.text p{
+    margin-top: 0;
+    margin-left: 10px;
+    max-width: 353px;
+    line-height: 25px;
+}
+.text span{
+    font-weight: bold;
+}
+
+
+.col-two{
+    grid-column: 2/3;
+    background-color: white;
+    border-radius: 10px;
+}
+.col-two-inside{
+    margin: 40px; 
+    
+}
+.col-two-inside form{
+    display: flex;
+    flex-direction: column;
+}
+.col-two-inside label{
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+.col-two-inside input{
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding-left: 20px;
+    font-size: 15px;
+}
+.terms{
+    display: flex;
+    margin: 20px 0;
+}
+.terms input{
+    height: 100%;
+}
+.terms p{
+    margin: 0;
+    line-height: 25px;
+}
+.create input{
+    width: 100%;
+    background-color: #664efc;
+    border: 1px solid #664efc;
+    font-weight: bold;
+    color: white;
+    transition: 200ms ease-in-out;
+}
+.create input:hover{
+    background-color: white;
+    border: 1px solid #664efc;
+    color: #664efc;
+}
+
+@media screen and (max-width: 1000px) {
+    #container-wrapper{
+        height: auto;
+
+    }
+    .wrapper{
+        grid-template-rows: .5fr 4fr .5fr;
+    }
+    .content{
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 1fr;
+    }
+    .col-one{
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+    }.text p{
+        max-width: 90%;
+    }
+    .col-two{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+}
+@media screen and (max-width: 500px) {
+    .back h4{
+        display: none;
+    }
+}
