@@ -96,6 +96,7 @@ header{
 }
 .terms input{
     height: 100%;
+    margin-right: 5px;
 }
 .terms p{
     margin: 0;
